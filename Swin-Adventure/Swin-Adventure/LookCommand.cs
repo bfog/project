@@ -9,9 +9,14 @@ namespace Swin_Adventure
 
         public override string Execute(Player p, string[] text)
         {
-            if(text.Length != 3 && text.Length != 5) { return "I don't know how to look like that"; }
+            if(text.Length != 3 && text.Length != 5 && text.Length != 1) { return "I don't know how to look like that"; }
 
             else if(text[0] != "look") { return "Error in look input"; }
+
+            else if (text.Length == 1)
+            {
+                return LookAtIn(text[0], p);
+            }
 
             else if(text[1] != "at") { return "What do you want to look at?"; }
 
@@ -19,7 +24,8 @@ namespace Swin_Adventure
 
             else if(text.Length == 3) { return LookAtIn(text[2], p); }
 
-            else if(text.Length == 5) {
+            else if(text.Length == 5)
+            {
 
                 if(FetchContainer(p, text[4]) == null)
                 {

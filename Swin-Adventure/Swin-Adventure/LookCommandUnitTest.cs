@@ -19,7 +19,7 @@ namespace Swin_Adventure
             bag = new Bag(new string[] { "bag" }, "a bag", "A bag which contains items");
             playerInventory = newPlayer.Inventory;
             bagInventory = bag.Inventory;
-            gem = new Item(new string[] { "gem"}, "a gem", "A shiny red gemS");
+            gem = new Item(new string[] { "gem"}, "a gem", "A shiny red gem");
             look = new LookCommand(new string[] { "look" });
 
             playerInventory.Put(bag);
@@ -29,13 +29,13 @@ namespace Swin_Adventure
         [Test]
         public void LookAtMe()
         {
-            Assert.AreEqual("You are Fred the mighty programmer\nYou are carrying\n\ta bag (bag)\n\ta gem (gem)\n", look.Execute(newPlayer, new string[] { "look", "at", "inventory"}));
+            Assert.AreEqual("You are carrying\n\ta bag (bag)\n\ta gem (gem)\n", look.Execute(newPlayer, new string[] { "look", "at", "inventory"}));
         }
 
         [Test]
         public void LookAtGem()
         {
-            Assert.AreEqual("You are carrying a gem (gem)", look.Execute(newPlayer, new string[] { "look", "at", "gem" }));
+            Assert.AreEqual("A shiny red gem", look.Execute(newPlayer, new string[] { "look", "at", "gem" }));
         }
 
         [Test]
@@ -49,7 +49,7 @@ namespace Swin_Adventure
         [Test]
         public void LookAtGemInMe()
         {
-            Assert.AreEqual("You are carrying a gem (gem)", look.Execute(newPlayer, new string[] { "look", "at", "gem", "in", "inventory" }));
+            Assert.AreEqual("A shiny red gem", look.Execute(newPlayer, new string[] { "look", "at", "gem", "in", "inventory" }));
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace Swin_Adventure
         {
             bagInventory.Put(gem);
 
-            Assert.AreEqual("You are carrying a gem (gem)", look.Execute(newPlayer, new string[] { "look", "at", "gem", "in", "bag" }));
+            Assert.AreEqual("A shiny red gem", look.Execute(newPlayer, new string[] { "look", "at", "gem", "in", "bag" }));
         }
 
         [Test]

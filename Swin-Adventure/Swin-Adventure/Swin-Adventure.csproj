@@ -59,6 +59,8 @@
     <Compile Include="InventoryUnitTest.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemUnitTest.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="LocationUnitTest.cs" />
     <Compile Include="LookCommand.cs" />
     <Compile Include="LookCommandUnitTest.cs" />
     <Compile Include="Player.cs" />

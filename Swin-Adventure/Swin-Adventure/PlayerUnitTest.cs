@@ -52,7 +52,7 @@ namespace Swin_Adventure
             Item pc = new Item(new string[] { "pc" }, "a computer", "A Personal Computer");
             newInventory.Put(pc);
 
-            Assert.AreEqual("You are Fred the mighty programmer\nYou are carrying\n\ta shovel (shovel)\n\ta computer (pc)\n", newPlayer.FullDescription);
+            Assert.AreEqual("You are carrying\n\ta shovel (shovel)\n\ta computer (pc)\n", newPlayer.FullDescription);
             TestContext.WriteLine(newPlayer.FullDescription);
         }
     }
