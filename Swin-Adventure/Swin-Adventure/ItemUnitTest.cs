@@ -15,7 +15,7 @@ namespace Swin_Adventure
         {         
             newPlayer = new Player("me", "inventory");
             newInventory = new Inventory();
-            shovel = new Item(new string[] { "shovel", "spade" }, "a shovel", "This is a mighty fine shovel");
+            shovel = new Item(new string[] { "shovel", "spade" }, "a shovel", "This is a mighty fine");
 
             newInventory.Put(shovel);
         }
@@ -35,7 +35,7 @@ namespace Swin_Adventure
         [Test]
         public void FullDescription()
         {
-            Assert.AreEqual("This is a mighty fine shovel", shovel.FullDescription);
+            Assert.AreEqual("You are carrying a shovel (shovel)", shovel.FullDescription);
         }
     }
 }

@@ -48,13 +48,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bag.cs" />
+    <Compile Include="BagUnitTest.cs" />
+    <Compile Include="Command.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="IdentifiableObject.cs" />
     <Compile Include="IdentifiableObjectUnitTest.cs" />
+    <Compile Include="IHaveInventory.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="InventoryUnitTest.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemUnitTest.cs" />
+    <Compile Include="LookCommand.cs" />
+    <Compile Include="LookCommandUnitTest.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerUnitTest.cs" />
     <Compile Include="Program.cs" />

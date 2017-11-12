@@ -20,12 +20,12 @@ namespace Swin_Adventure
             }
             return false;
         }
-        
+
         public void Put(Item itm)
         {
             _items.Add(itm);
         }
-        
+
         public Item Take(string id)
         {
             foreach(Item itm in _items)

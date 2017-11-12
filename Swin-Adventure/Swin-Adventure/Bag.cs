@@ -2,11 +2,11 @@
 
 namespace Swin_Adventure
 {
-    public class Player : GameObject, IHaveInventory
+    public class Bag : Item, IHaveInventory
     {
         private Inventory _inventory;
 
-        public Player(string name, string desc) : base(new string[] { "me", "inventory"}, name, desc)
+        public Bag(string[] ids, string name, string desc) : base(ids, name, desc)
         {
             _inventory = new Inventory();
         }
@@ -22,12 +22,12 @@ namespace Swin_Adventure
                 return _inventory.Fetch(id);
             }
         }
-      
+
         public override string FullDescription
         {
             get
             {
-                return "You are Fred the mighty programmer\nYou are carrying\n" + _inventory.ItemList;             
+                return "In the " + FirstId + " you can see:\n" + _inventory.ItemList; 
             }
         }
 
